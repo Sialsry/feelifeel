@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // val = function(sheep) {
+    //     return "horse"
+    // }
+
+    // function fn(arg) {
+    //     arg(arg);
+    // }
+
+
+    // console.log(fn(val))
+
+
+// function sum(x, y, callback) {
+//   callback(x + y); 
+// }
+
+// sum(1, 2, (result) => {
+//   console.log(result);
+// });
+
+
+function sayHello(callback) {
+  callback = (name) => {console.log("hello, " + name)}
+  var name = "Alice";
+  callback(name); 
+  // hello, Alice
+}
+
+
+sayHello((name) => {
+  console.log("Hello, " + name);
+});
+
+</script>
+</html>

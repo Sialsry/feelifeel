@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function localNum() {
+    let num = 10; // 지역 변수 num에 숫자 10을 대입함.
+    document.write("함수 내부에서 변수 num의 타입은 " + typeof num + "이다.<br>"); // number
+}
+localNum();       // 함수 localNum()을 호출함.
+document.write("함수의 호출이 끝난 뒤 변수 num의 타입은 " + typeof num + "이다."); // undefined
+
+// console.log(num);
+
+
+// function name(a){
+//     console.log(a);
+// }
+
+// name(a)
+// name("김민교")
+// name(123)
+// name(b)
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+</style>
+<body>
+    <h1></h1>
+    <button>+</button>
+    <button>-</button>
+</body>
+<script>
+    const element = document.querySelector("h1")
+    const element2 = document.querySelector("button:nth-child(2)")
+    const element3 = document.querySelector("button:nth-child(3)")
+    let num = 0;
+    element.innerHTML = num;
+
+
+    element2.onclick = () => {
+    num += 1
+    element.innerHTML = num
+}
+    element3.onclick = () => {
+    num -= 1
+    if (num < 0) {
+    num = 0
+    element.innerHTML = num
+    } else {
+    element.innerHTML = num
+    }
+}
+
+
+
+
+
+
+
+</script>
+
+</html>

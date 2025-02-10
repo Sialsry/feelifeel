@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">이메일</label>
+    <input type="text" class="email">
+    <label for="">비밀번호</label>
+    <input type="password" class="upw">
+    <button>회원가입</button>
+</body>
+<script>
+    let signupBtn = document.querySelector("button")
+
+    const isEmail = (value) => {
+        let regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/
+        return regExp.test(value);
+    }
+
+    const inPassWord = (value) => {
+        let regExp = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/
+        return regExp.test(value);
+    }
+
+    signupBtn.onclick = () => {
+        let userEmail = document.querySelector(".email").value;
+        let upw = document.querySelector(".upw").value;
+        if (isEmail(userEmail) && inPassWord(upw)) {
+            console.log("올바른 형식입니다.")
+        }
+    }
+</script>
+</html>

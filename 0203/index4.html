@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const getWeather = async (cityName) => {
+        // 내부의 기능을 동기적으로 호출을 해야한다. 
+        // 데이터를 가져오는 시간이 걸리기 때문에 잠시 데이터를 정상적으로 응답 받을때까지 대기 
+        const apiKey = "6b932d4fce1f17ba1b96bf62ca471ece"
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`
+        const res = await fetch(url);
+        const data = await res.json();
+        console.log(data)
+    }
+    getWeather("Seoul")
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const a = [1];
+    const b = [1];
+    // 참조 타입은 주소를 가리키는 주소
+    // 값은 heap이라는 공간에 저장이 되고
+    // 주소를 변수가 가리키게 된다.
+console.log(a === b); // 주소가 같냐? 다름
+
+
+
+
+
+const c = a;
+// a의 변수의 주소를 복사해서 사용한 것
+// 할당된 것이 주소
+// 같은 주소를 바라보고 있기 때문에 c에서 가리키는 주소의 값을 변경하면 a의 바라보고 있는 주소의 값이 바뀐다.
+// 얕은 복사
+
+console.log(c === a);
+
+
+
+// 깊은 복사
+
+const d = [...a] // 배열을 초기화 ... (스프레드 연산자): 참조타입의 깊은 복사를 하는 구문 객체 또는 배열의 값을 깊은복사해온다. 배열이나 객체의 내용을 풀어헤친다.
+console.log(d === a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

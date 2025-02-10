@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            margin: auto;
+        }
+
+        .login-form label {
+            margin: 10px 0;
+        }
+
+        .login-form button {
+            margin-top: 20px;
+        }
+        .user-info {
+            width: 500px;
+            height: 300px;
+            margin: 20px auto 0 auto;
+            border: 1px solid;
+            position: relative;            
+        }
+        .user-info img {
+            width: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+    <form class="login-form">
+        <label for="">아이디</label>
+        <input type="text" name="uid">
+        <label for="">비밀번호</label>
+        <input type="password" name="upw">
+        <button>로그인</button>
+    </form>
+
+    <div class="user-info">
+    </div>
+</body>
+<script>
+    const data = {
+        nickName : "soon",
+        uid : "admin",
+        password : "admin1234"
+    }
+
+    const login = (uid, upw) => {
+        const img = document.createElement("img")
+        img.src = "./images/loading.gif"
+        document.querySelector(".user-info").innerHTML = ""
+        document.querySelector(".user-info").append(img)
+        setTimeout(() => {
+            loginCheck(uid, upw);
+        }, 1000)
+        const inputs = document.querySelectorAll(".login-form input")
+        input.forEach((e) => {
+            e.disabled = true
+        });
+    
+    
+    }
+    
+    const loginCheck = (uid, upw) => {
+        document.querySelector(".user-info").innerHTML = ""
+        const nickName = document.createElement("div")
+        if ((uid === data.uid) && (upw === data.password)) {
+            console.log("로그인 성공")
+            nickName.innerHTML = `유저 닉네임: ${data.nickName}`
+        } else {
+            console.log("로그인 실패")
+            nickName.innerHTML = "아이디와 비밀번호를 다시 입력하세요"
+        }
+        document.querySelector(".user-info").append(nickName)
+    }
+
+    document.querySelector(".login-form").onsubmit = (e) => {
+        e.preventDefault()
+        const {uid, upw} = e.target
+        login(uid.value, upw.value)
+    }
+
+
+
+
+</script>
+</html>
