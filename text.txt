@@ -1,1 +1,7 @@
-이 파일은 어느 branch에 작성 혹은 수정되어 기록되는 파일인가요? 
+aaaaaaagitr
+bbbbbbbbb
+ccccc
+dddddddddddddd
+eeee
+fffff
+gg second branch에서 이렇게 두 번째 commit을 하였습니다. 
