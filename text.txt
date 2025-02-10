@@ -1,7 +1,1 @@
-aaaaaaagitr
-bbbbbbbbb
-ccccc
-dddddddddddddd
-eeee
-fffff
-gg
+이 파일은 어느 branch에 작성 혹은 수정되어 기록되는 파일인가요? 
